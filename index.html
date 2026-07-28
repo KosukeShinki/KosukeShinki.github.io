@@ -394,7 +394,7 @@
               </dl>
 
               <div class="work__detail">
-                <h4>技術的な工夫</h4>
+                <h4>技術的な工夫・難しかった点</h4>
                 <p>
                   実装上の工夫、設計の考え方、パフォーマンス改善、チーム開発で意識した点などを記載します。
                   「何をしたか」だけでなく「なぜその方法を選んだか」を含めると伝わりやすくなります。
@@ -427,8 +427,8 @@
                 muted
                 playsinline
                 preload="metadata"
-                poster="board_image.jpeg"
-                aria-label="作品2の紹介動画"
+                poster="images/board_image.jpg"
+                aria-label="研究の紹介動画"
               >
                 <source src="videos/demo_video_20260531_001.mp4" type="video/mp4">
                 お使いのブラウザは動画再生に対応していません。
@@ -444,20 +444,32 @@
               <p class="work__category">GRAPHICS / SIMULATION</p>
               <h3>大学院での研究</h3>
               <p class="work__summary">
+                <!--
                 C++やGPUを使用したグラフィックス・シミュレーション作品などの概要を記載します．
                 動画では動作や見た目が分かる場面を短くまとめると効果的です．
+                -->
+
+                大学院では近年SIGGRAPHでも扱われることが多いMaterial Point Method(以下，MPM)という手法を使用した調理シミュレーション手法の開発を行っています．
               </p>
 
               <dl class="work__meta">
                 <div><dt>制作・研究期間</dt><dd>2024年3月〜</dd></div>
                 <div><dt>使用技術</dt><dd>C++ / CUDA / OpenGL</dd></div>
+                <div><dt>研究実績</dt><dd>情報メディア創成学類長表彰 VisualComputing2026ショート発表</dd></div>
               </dl>
 
               <div class="work__detail">
-                <h4>技術的な工夫</h4>
+                <h4>技術的な工夫・難しかった点</h4>
                 <p>
+                <!--
                   計算量の削減、並列化、データ構造、描画負荷の改善など、
                   数値や比較結果を交えて説明できる内容を記載してください。
+                -->
+
+                私の研究室にMPMのテンプレートが存在しなかったため全て私がコーディングしたコードになっています．<br>
+                C++，CUDAを用いてGPUも利用した実装を行い，出力したメッシュをBlenderで読み込んでレンダリングしています．<br>
+                開発中にはOpenGLを用いてデバッグ用のレンダリングを行っています<br>
+                実績として，CG分野で国内最大のシンポジウムであるVisualComputingで発表を行いました．
                 </p>
               </div>
 
@@ -468,7 +480,6 @@
               </ul>
 
               <div class="work__links">
-                <a href="#" aria-label="作品2のGitHubを開く">GitHub</a>
                 <a href="#" aria-label="作品2の詳細資料を開く">詳細資料</a>
               </div>
             </div>
@@ -504,7 +515,7 @@
               </dl>
 
               <div class="work__detail">
-                <h4>技術的な工夫</h4>
+                <h4>技術的な工夫・難しかった点</h4>
                 <p>
                   コンポーネント設計、レスポンシブ対応、データ保存、共同開発の進め方など、
                   実際に工夫した内容へ置き換えてください。
