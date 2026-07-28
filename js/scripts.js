@@ -30,7 +30,10 @@ function setupMobileMenu() {
 
   const setMenuState = (isOpen) => {
     toggle.setAttribute("aria-expanded", String(isOpen));
-    toggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "メニューを閉じる" : "メニューを開く",
+    );
     menu.classList.toggle("is-open", isOpen);
     document.body.classList.toggle("menu-open", isOpen);
   };
@@ -56,7 +59,9 @@ function setupMobileMenu() {
 /** ヘッダー背景と現在位置のナビゲーション表示 */
 function setupScrollNavigation() {
   const nav = document.querySelector(".global-nav");
-  const navLinks = [...document.querySelectorAll('.global-nav__list a[href^="#"]')];
+  const navLinks = [
+    ...document.querySelectorAll('.global-nav__list a[href^="#"]'),
+  ];
   const sections = navLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
@@ -82,13 +87,16 @@ function setupScrollNavigation() {
 
       const currentId = `#${visibleEntry.target.id}`;
       navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === currentId);
+        link.classList.toggle(
+          "is-active",
+          link.getAttribute("href") === currentId,
+        );
       });
     },
     {
       rootMargin: "-25% 0px -60% 0px",
       threshold: [0, 0.1, 0.25, 0.5],
-    }
+    },
   );
 
   sections.forEach((section) => observer.observe(section));
@@ -114,7 +122,7 @@ function setupRevealAnimation() {
     {
       rootMargin: "0px 0px -10% 0px",
       threshold: 0.1,
-    }
+    },
   );
 
   targets.forEach((target) => observer.observe(target));
@@ -146,7 +154,7 @@ function setupSkillLevels() {
         currentObserver.unobserve(entry.target);
       });
     },
-    { threshold: 0.35 }
+    { threshold: 0.35 },
   );
 
   skillLevels.forEach((skillLevel) => observer.observe(skillLevel));
@@ -164,12 +172,19 @@ function setupImageFallbacks() {
       if (image.dataset.fallbackApplied === "true") return;
 
       const title = image.dataset.placeholderTitle || "IMAGE";
-      const subtitle = image.dataset.placeholderSubtitle || "画像を配置してください";
+      const subtitle =
+        image.dataset.placeholderSubtitle || "画像を配置してください";
       const isHeroImage = image.classList.contains("hero__photo");
       const width = isHeroImage ? 1600 : 1200;
       const height = isHeroImage ? 1000 : 760;
 
-      image.src = createPlaceholderSvg(title, subtitle, width, height, isHeroImage);
+      image.src = createPlaceholderSvg(
+        title,
+        subtitle,
+        width,
+        height,
+        isHeroImage,
+      );
       image.classList.add("is-placeholder");
       image.dataset.fallbackApplied = "true";
     };
