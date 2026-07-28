@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="エンジニアとしてのスキル・制作実績を紹介するポートフォリオサイトです。">
+	<meta name="theme-color" content="#10151d">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="エンジニアとしてのスキル・制作実績を紹介するポートフォリオサイトです。">
@@ -9,14 +14,31 @@
 
 	<!-- ▼ 本人の名前に変更してください -->
 	<title>新木 康介 | エンジニア ポートフォリオ</title>
+	<!-- ▼ 本人の名前に変更してください -->
+	<title>新木 康介 | エンジニア ポートフォリオ</title>
 
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/scripts.js" defer></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/scripts.js" defer></script>
 </head>
 
+
 <body>
 	<a class="skip-link" href="#main-content">本文へ移動</a>
+	<a class="skip-link" href="#main-content">本文へ移動</a>
 
+	<!-- =========================================================
+		HEADER / HERO
+		images/profile.jpg を本人写真に置き換えてください。
+		推奨: 横長 1600×1000px前後。顔が中央〜右側にある写真。
+	========================================================== -->
+	<header class="hero" id="top">
+		<div class="hero__media" aria-hidden="true">
+			<img class="hero__photo js-fallback-image" src="images/profile.jpg" alt=""
+				data-placeholder-title="PROFILE PHOTO" data-placeholder-subtitle="images/profile.jpg に本人写真を配置">
+		</div>
+		<div class="hero__overlay" aria-hidden="true"></div>
 	<!-- =========================================================
 		HEADER / HERO
 		images/profile.jpg を本人写真に置き換えてください。
@@ -34,7 +56,18 @@
 				<span class="global-nav__logo-mark">&lt;/&gt;</span>
 				<span>PORTFOLIO</span>
 			</a>
+		<nav class="global-nav" aria-label="メインナビゲーション">
+			<a class="global-nav__logo" href="#top" aria-label="ページ上部へ">
+				<span class="global-nav__logo-mark">&lt;/&gt;</span>
+				<span>PORTFOLIO</span>
+			</a>
 
+			<button class="global-nav__toggle" type="button" aria-expanded="false" aria-controls="global-nav-list"
+				aria-label="メニューを開く">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 			<button class="global-nav__toggle" type="button" aria-expanded="false" aria-controls="global-nav-list"
 				aria-label="メニューを開く">
 				<span></span>
@@ -49,10 +82,24 @@
 				<li><a href="#contact">CONTACT</a></li>
 			</ul>
 		</nav>
+			<ul class="global-nav__list" id="global-nav-list">
+				<li><a href="#profile">PROFILE</a></li>
+				<li><a href="#skills">SKILLS</a></li>
+				<li><a href="#works">WORKS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
 
 		<div class="hero__content">
 			<p class="hero__eyebrow">ENGINEER PORTFOLIO</p>
+		<div class="hero__content">
+			<p class="hero__eyebrow">ENGINEER PORTFOLIO</p>
 
+			<!-- ▼ 名前・肩書きを変更してください -->
+			<h1 class="hero__title">
+				<span>新木 康介</span>
+				<small>ゲーム / グラフィック / 物理シミュレーション / ソフトウェア </small>
+			</h1>
 			<!-- ▼ 名前・肩書きを変更してください -->
 			<h1 class="hero__title">
 				<span>新木 康介</span>
@@ -64,7 +111,17 @@
 				技術と表現の両面から、<br>
 				体験の質を高めるエンジニアを目指しています。
 			</p>
+			<!-- ▼ キャッチコピーを変更してください -->
+			<p class="hero__lead">
+				技術と表現の両面から、<br>
+				体験の質を高めるエンジニアを目指しています。
+			</p>
 
+			<div class="hero__actions">
+				<a class="button button--primary" href="#works">制作実績を見る</a>
+				<a class="button button--ghost" href="#contact">連絡先を見る</a>
+			</div>
+		</div>
 			<div class="hero__actions">
 				<a class="button button--primary" href="#works">制作実績を見る</a>
 				<a class="button button--ghost" href="#contact">連絡先を見る</a>
@@ -76,11 +133,16 @@
 			<span class="hero__scroll-line"></span>
 		</a>
 	</header>
+		<a class="hero__scroll" href="#profile" aria-label="プロフィールへスクロール">
+			<span>SCROLL</span>
+			<span class="hero__scroll-line"></span>
+		</a>
+	</header>
 
 	<main id="main-content">
 		<!-- =========================================================
-         PROFILE
-    ========================================================== -->
+			PROFILE
+		========================================================== -->
 		<section class="section section--light" id="profile">
 			<div class="section__inner">
 				<header class="section-heading reveal">
@@ -91,6 +153,14 @@
 					</div>
 				</header>
 
+				<div class="profile reveal">
+					<div class="profile__intro">
+						<!-- ▼ 名前・所属・志望職種を変更してください -->
+						<p class="profile__role">プログラマ / エンジニア / テクニカルアーティスト</p>
+						<h3 class="profile__name">
+							新木 康介
+							<span>Kosuke Shinki</span>
+						</h3>
 				<div class="profile reveal">
 					<div class="profile__intro">
 						<!-- ▼ 名前・所属・志望職種を変更してください -->
@@ -112,7 +182,91 @@
 							将来は、エンジニアリングとビジュアル表現をつなぐ仕事に携わりたいと考えています。
 						</p>
 					</div>
+						<!-- ▼ 自己紹介文を変更してください -->
+						<p class="profile__text">
+							大学でコンピュータグラフィックスやソフトウェア開発を学びながら、
+							Unity・C#を中心としたゲーム制作、C++によるグラフィックス実装、
+							Webアプリケーション開発などに取り組んでいます。
+						</p>
+						<p class="profile__text">
+							実装するだけでなく、処理速度・保守性・操作感を意識し、
+							チームのメンバーが扱いやすい設計を考えることを大切にしています。
+							将来は、エンジニアリングとビジュアル表現をつなぐ仕事に携わりたいと考えています。
+						</p>
+					</div>
 
+					<dl class="profile__facts" aria-label="プロフィール詳細">
+						<!-- ▼ 各項目を変更してください。不要な行は削除できます -->
+						<div>
+							<dt>所属</dt>
+							<dd>筑波大学人間総合科学学術院 人間総合科学研究群 情報学学位プログラム 物理ベースコンピューターグラフィックス研究室</dd>
+						</div>
+						<div>
+							<dt>専攻・研究</dt>
+							<dd>コンピュータグラフィックス / 物理シミュレーション / 並列計算</dd>
+						</div>
+						<div>
+							<dt>志望職種</dt>
+							<dd>ゲームプログラマー / テクニカルアーティスト</dd>
+						</div>
+						<div>
+							<dt>得意分野</dt>
+							<dd>Unity UI実装 描画処理 ツール開発 物理シミュレーション</dd>
+						</div>
+						<div>
+							<dt>趣味</dt>
+							<dd>ゲーム制作 3Dモデリング 技術記事の調査</dd>
+						</div>
+					</dl>
+				</div>
+
+				<!-- ===========================================
+            PROFILE GALLERY
+            images/profile-gallery-01.jpg～
+            に画像を配置してください。
+        =========================================== -->
+
+				<div class="profile__gallery">
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-01.jpg" alt="研究室での様子"
+							data-placeholder-title="PHOTO 01" data-placeholder-subtitle="研究室・開発風景">
+						<figcaption>研究室</figcaption>
+					</figure>
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-02.jpg" alt="学会発表"
+							data-placeholder-title="PHOTO 02" data-placeholder-subtitle="学会・イベント">
+						<figcaption>学会発表</figcaption>
+					</figure>
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-03.jpg" alt="ゲーム制作"
+							data-placeholder-title="PHOTO 03" data-placeholder-subtitle="ゲーム制作">
+						<figcaption>ゲーム制作</figcaption>
+					</figure>
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-04.jpg" alt="趣味"
+							data-placeholder-title="PHOTO 04" data-placeholder-subtitle="趣味">
+						<figcaption>趣味</figcaption>
+					</figure>
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-05.jpg" alt="イベント"
+							data-placeholder-title="PHOTO 05" data-placeholder-subtitle="イベント">
+						<figcaption>イベント</figcaption>
+					</figure>
+
+					<figure class="profile__gallery-item">
+						<img class="js-fallback-image" src="images/profile-gallery-06.jpg" alt="その他"
+							data-placeholder-title="PHOTO 06" data-placeholder-subtitle="その他">
+						<figcaption>その他</figcaption>
+					</figure>
+				</div>
+			</div>
+
+		</section>
 					<dl class="profile__facts" aria-label="プロフィール詳細">
 						<!-- ▼ 各項目を変更してください。不要な行は削除できます -->
 						<div>
@@ -200,11 +354,37 @@
 						<h2>SKILLS</h2>
 					</div>
 				</header>
+		<!-- =========================================================
+			SKILLS
+			テーブルの行を複製・削除して自由に変更できます。
+			data-level は 0〜100 の数値です。
+		========================================================== -->
+		<section class="section section--dark" id="skills">
+			<div class="section__inner">
+				<header class="section-heading section-heading--dark reveal">
+					<p class="section-heading__number">02</p>
+					<div>
+						<p class="section-heading__label">TECH STACK</p>
+						<h2>SKILLS</h2>
+					</div>
+				</header>
 
 				<p class="skills__note reveal">
 					経験年数，使用用途，スキルの自己評価を記載しています．
 				</p>
+				<p class="skills__note reveal">
+					経験年数，使用用途，スキルの自己評価を記載しています．
+				</p>
 
+				<div class="skill-grid">
+					<article class="skill-card reveal">
+						<div class="skill-card__heading">
+							<span class="skill-card__icon" aria-hidden="true">01</span>
+							<div>
+								<p>LANGUAGE</p>
+								<h3>プログラミング言語</h3>
+							</div>
+						</div>
 				<div class="skill-grid">
 					<article class="skill-card reveal">
 						<div class="skill-card__heading">
@@ -274,7 +454,74 @@
 							</table>
 						</div>
 					</article>
+						<div class="skill-table-wrap">
+							<table class="skill-table">
+								<thead>
+									<tr>
+										<th>技術</th>
+										<th>経験・用途</th>
+										<th>習熟度</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>C#</td>
+										<td>8年 Unityでのゲーム・エディタ拡張</td>
+										<td>
+											<div class="skill-level" data-level="90" aria-label="習熟度 90パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>C++</td>
+										<td>2年 CG・物理シミュレーション</td>
+										<td>
+											<div class="skill-level" data-level="90" aria-label="習熟度 90パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Node.js</td>
+										<td>1年 Electronを用いたデスクトップアプリ開発で利用</td>
+										<td>
+											<div class="skill-level" data-level="50" aria-label="習熟度 50パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Python</td>
+										<td>6か月 機械学習・拡散モデルのファインチューニングで使用</td>
+										<td>
+											<div class="skill-level" data-level="10" aria-label="習熟度 10パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>CUDA</td>
+										<td>2年 並列計算</td>
+										<td>
+											<div class="skill-level" data-level="50" aria-label="習熟度 50パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
 
+					<article class="skill-card reveal">
+						<div class="skill-card__heading">
+							<span class="skill-card__icon" aria-hidden="true">02</span>
+							<div>
+								<p>GAME / GRAPHICS</p>
+								<h3>ゲーム・CG</h3>
+							</div>
+						</div>
 					<article class="skill-card reveal">
 						<div class="skill-card__heading">
 							<span class="skill-card__icon" aria-hidden="true">02</span>
@@ -325,6 +572,47 @@
 							</table>
 						</div>
 					</article>
+						<div class="skill-table-wrap">
+							<table class="skill-table">
+								<thead>
+									<tr>
+										<th>技術</th>
+										<th>経験・用途</th>
+										<th>習熟度</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Unity</td>
+										<td>8年 2D・3Dゲーム、UI、ツール制作</td>
+										<td>
+											<div class="skill-level" data-level="90" aria-label="習熟度 90パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>HLSL</td>
+										<td>2年 シェーダー・描画表現</td>
+										<td>
+											<div class="skill-level" data-level="80" aria-label="習熟度 80パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Blender</td>
+										<td>7年 キャラモデリング・物理シミュレーションで生成したメッシュのレンダリング</td>
+										<td>
+											<div class="skill-level" data-level="80" aria-label="習熟度 80パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
 
 					<article class="skill-card reveal">
 						<div class="skill-card__heading">
@@ -334,7 +622,59 @@
 								<h3>Web・開発ツール</h3>
 							</div>
 						</div>
+					<article class="skill-card reveal">
+						<div class="skill-card__heading">
+							<span class="skill-card__icon" aria-hidden="true">03</span>
+							<div>
+								<p>WEB / TOOL</p>
+								<h3>Web・開発ツール</h3>
+							</div>
+						</div>
 
+						<div class="skill-table-wrap">
+							<table class="skill-table">
+								<thead>
+									<tr>
+										<th>技術</th>
+										<th>経験・用途</th>
+										<th>習熟度</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>HTML / CSS / JS / TS</td>
+										<td>6か月 Electronを用いたデスクトップアプリ開発のフロントエンド側で使用</td>
+										<td>
+											<div class="skill-level" data-level="40" aria-label="習熟度 40パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>React</td>
+										<td>6か月 Electronを用いたデスクトップアプリ開発のフロントエンド側で使用</td>
+										<td>
+											<div class="skill-level" data-level="40" aria-label="習熟度 40パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Git / GitHub</td>
+										<td>7年 制作物のバージョン管理・共同開発</td>
+										<td>
+											<div class="skill-level" data-level="70" aria-label="習熟度 70パーセント">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
 						<div class="skill-table-wrap">
 							<table class="skill-table">
 								<thead>
@@ -394,19 +734,53 @@
 						<h2>WORKS</h2>
 					</div>
 				</header>
+		<!-- =========================================================
+			WORKS
+			作品は3件とも、このページ内で画像・動画・説明を表示します。
+			外部リンクを付けたい場合のみ、各作品末尾のボタンを使用してください。
+		========================================================== -->
+		<section class="section section--works" id="works">
+			<div class="section__inner">
+				<header class="section-heading reveal">
+					<p class="section-heading__number">03</p>
+					<div>
+						<p class="section-heading__label">SELECTED PROJECTS</p>
+						<h2>WORKS</h2>
+					</div>
+				</header>
 
 				<p class="works__intro reveal">
+					<!--
 					制作物そのものだけでなく、担当箇所・工夫・技術的な課題が伝わる説明にすると、
 					採用担当者が内容を把握しやすくなります。
+					-->
+
+					今までに制作した作品の説明です．
 				</p>
 
 				<div class="works-list">
 					<!-- ==================== WORK 01：画像 ==================== -->
 					<article class="work reveal">
 						<div class="work__media media-frame">
+							<div class="work__media media-frame js-video-frame">
+								<!--
+									▼ videos/work-02.mp4 を作品動画に置き換えてください。
+									動画を画像に変更する場合は、このvideo要素をWORK 01のimg要素と同じ形に置き換えます。
+								-->
+								<video controls muted playsinline preload="metadata" poster="images/Title001.png"
+									aria-label="作品の紹介動画">
+									<source src="videos/作品1_新木康介.mp4" type="video/mp4">
+									お使いのブラウザは動画再生に対応していません。
+								</video>
+								<div class="media-placeholder" aria-hidden="true">
+									<strong>WORK 01 VIDEO</strong>
+									<span>ゲーム作品の紹介動画</span>
+								</div>
+							</div>
+
 							<div>
 								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
-								<img class="js-fallback-image" src="images/board_image.jpg" alt="作品1のスクリーンショット"
+								<img class="js-fallback-image" src="images/Title001.png" alt="作品1のスクリーンショット"
 									data-placeholder-title="WORK 01-1 IMAGE"
 									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
 								<span class="media-frame__index" aria-hidden="true">01</span>
@@ -414,7 +788,7 @@
 
 							<div>
 								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
-								<img class="js-fallback-image" src="images/board_image.jpg" alt="作品1のスクリーンショット"
+								<img class="js-fallback-image" src="images/description_tutorial001.png" alt="作品1のスクリーンショット"
 									data-placeholder-title="WORK 01-2 IMAGE"
 									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
 								<span class="media-frame__index" aria-hidden="true">02</span>
@@ -422,8 +796,8 @@
 
 							<div>
 								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
-								<img class="js-fallback-image" src="images/board_image.jpg" alt="作品1のスクリーンショット"
-									data-placeholder-title="WORK 01-2 IMAGE"
+								<img class="js-fallback-image" src="images/description_game001.png" alt="作品1のスクリーンショット"
+									data-placeholder-title="WORK 01-3 IMAGE"
 									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
 								<span class="media-frame__index" aria-hidden="true">03</span>
 							</div>
@@ -432,49 +806,76 @@
 						<div class="work__content">
 							<p class="work__category">GAME DEVELOPMENT</p>
 							<!-- ▼ タイトルを変更してください -->
-							<h3>作品タイトル 01</h3>
+							<h3>2Dアクションゲーム</h3>
 							<p class="work__summary">
-								Unityで制作したゲーム作品の概要を記載します。
+								<!--
+								Unityで制作したゲーム作品の概要を記載します．
 								どのような課題を解決する作品なのか、ゲームの特徴は何かを2〜4文程度で説明してください。
+								-->
+
+								すべてドット絵で構成された2Dアクションゲームです．ドット絵も趣味なため，自分の描いたキャラやモンスターを動かしてみたいという動機で制作を開始しました．
 							</p>
 
 							<dl class="work__meta">
 								<div>
 									<dt>制作期間</dt>
-									<dd>20XX年X月〜20XX年X月</dd>
+									<dd>2024年2月〜2025年9月</dd>
 								</div>
 								<div>
 									<dt>制作人数</dt>
-									<dd>個人制作 / X名</dd>
+									<dd>個人制作</dd>
 								</div>
 								<div>
 									<dt>担当</dt>
-									<dd>ゲームロジック、UI、シェーダー</dd>
+									<dd>ゲームロジック / UI / シェーダー / アセット制作</dd>
 								</div>
 								<div>
 									<dt>使用技術</dt>
 									<dd>Unity / C# / DOTween / Git</dd>
 								</div>
+								<div>
+									<dt>プレイ時間目安</dt>
+									<dd>約2時間</dd>
+								</div>
+								<div>
+									<dt>周囲の反応</dt>
+									<dd>ドット絵とアクションがきれい <br> 操作性が良い <br> 難易度が高い <br> 敵を倒すメリットが薄い </dd>
+								</div>
 							</dl>
+
+							<div class="work__detail">
+								<h4>ゲーム説明</h4>
+								<p>
+									プレイヤーはキーボードのA/Dキーで左右に移動，Spaceキーでジャンプを行えます．
+									また，ステージを進むうちにスキルが手に入るため，これを使って自分を強化しつつ敵を倒して進んでいくというゲームです．
+									ゲームを開始すると会話形式でチュートリアルが始まりため，プレイヤーはすぐにやることを理解をできます．
+									<b>実際に周囲の人に遊んでもらった際も最初に詰まることなく進める良いチュートリアルができた自信があります．</b>
+									また，セーブ機能もありシーン遷移，ボス戦後には自動でセーブが入ります．
+								</p>
+							</div>
 
 							<div class="work__detail">
 								<h4>技術的な工夫・難しかった点</h4>
 								<p>
-									実装上の工夫、設計の考え方、パフォーマンス改善、チーム開発で意識した点などを記載します。
-									「何をしたか」だけでなく「なぜその方法を選んだか」を含めると伝わりやすくなります。
+									タイトルから入ってすぐのような会話シーンはたくさんのセリフを各キャラクターごとに設定する必要があるため，デバッグしやすくする必要があった．
+									これをScriptableObjectとこれを読みだすクラスを合わせて構築することでセリフの簡単な作成・修正を可能にした．
+									また，プレイヤーや敵のアクションとシーン状態ごとの状態遷移が複雑になる問題をUniRxを用いたObserverパターンで解決した．
+									さらに，ダメージを受けた際のわかりやすい効果が欲しかったがUnityに標準でなかったため，ダメージ時に色収差があるエフェクトをかけるシェーダーを新たに作成した．
 								</p>
 							</div>
 
 							<ul class="tag-list" aria-label="使用技術">
 								<li>Unity</li>
 								<li>C#</li>
-								<li>Game UI</li>
+								<li>HLSL</li>
 							</ul>
 
 							<!-- 外部リンクが不要なら、この work__links 全体を削除してください -->
 							<div class="work__links">
+								<!--
 								<a href="#" aria-label="作品1のGitHubを開く">GitHub</a>
-								<a href="#" aria-label="作品1の詳細資料を開く">詳細資料</a>
+								-->
+								<a href="https://drive.google.com/drive/u/0/folders/1WcEFbZ1tx6Vnk9p35xNBxeFAIgfqqRBr" aria-label="作品1の詳細資料を開く">詳細資料</a>
 							</div>
 						</div>
 					</article>
@@ -495,9 +896,13 @@
 								<strong>WORK 02 VIDEO</strong>
 								<span>研究の紹介動画</span>
 							</div>
-							<span class="media-frame__index" aria-hidden="true">02</span>
 						</div>
 
+						<div class="work__content">
+							<p class="work__category">GRAPHICS / SIMULATION</p>
+							<h3>大学院での研究</h3>
+							<p class="work__summary">
+								<!--
 						<div class="work__content">
 							<p class="work__category">GRAPHICS / SIMULATION</p>
 							<h3>大学院での研究</h3>
@@ -509,7 +914,23 @@
 
 								大学院では近年SIGGRAPHでも扱われることが多いMaterial Point Method(以下，MPM)という手法を使用した調理シミュレーション手法の開発を行っています．
 							</p>
+								大学院では近年SIGGRAPHでも扱われることが多いMaterial Point Method(以下，MPM)という手法を使用した調理シミュレーション手法の開発を行っています．
+							</p>
 
+							<dl class="work__meta">
+								<div>
+									<dt>制作・研究期間</dt>
+									<dd>2024年3月〜</dd>
+								</div>
+								<div>
+									<dt>使用技術</dt>
+									<dd>C++ / CUDA / OpenGL</dd>
+								</div>
+								<div>
+									<dt>研究実績</dt>
+									<dd>情報メディア創成学類長表彰 VisualComputing2026ショート発表</dd>
+								</div>
+							</dl>
 							<dl class="work__meta">
 								<div>
 									<dt>制作・研究期間</dt>
@@ -532,11 +953,18 @@
 									計算量の削減、並列化、データ構造、描画負荷の改善など、
 									数値や比較結果を交えて説明できる内容を記載してください。
 									-->
+							<div class="work__detail">
+								<h4>技術的な工夫・難しかった点</h4>
+								<p>
+									<!--
+									計算量の削減、並列化、データ構造、描画負荷の改善など、
+									数値や比較結果を交えて説明できる内容を記載してください。
+									-->
 
 									私の研究室にMPMのテンプレートが存在しなかったため全て私がコーディングしたコードになっています．
 									C++，CUDAを用いてGPUも利用した実装を行い，出力したメッシュをBlenderで読み込んでレンダリングしています．
 									開発中にはOpenGLを用いてデバッグ用のレンダリングを行っています．
-									実績として，CG分野で国内最大のシンポジウムであるVisualComputingで発表を行いました．
+									<b>実績として，CG分野で国内最大のシンポジウムであるVisualComputingで発表を行いました．</b>
 								</p>
 							</div>
 
@@ -545,7 +973,17 @@
 								<li>CUDA</li>
 								<li>OpenGL</li>
 							</ul>
+							<ul class="tag-list" aria-label="使用技術">
+								<li>C++</li>
+								<li>CUDA</li>
+								<li>OpenGL</li>
+							</ul>
 
+							<div class="work__links">
+								<a href="https://pbcglab.jp/publication/" aria-label="研究室へのリンクを開く">所属研究室</a>
+							</div>
+						</div>
+					</article>
 							<div class="work__links">
 								<a href="https://pbcglab.jp/publication/" aria-label="研究室へのリンクを開く">所属研究室</a>
 							</div>
@@ -561,10 +999,107 @@
 								data-placeholder-subtitle="images/work-03.jpg に画像を配置">
 							<span class="media-frame__index" aria-hidden="true">03</span>
 						</div>
+					<!-- ==================== WORK 03：画像 ==================== -->
+					<article class="work reveal">
+						<div class="work__media media-frame">
+							<!-- ▼ images/work-03.jpg を作品画像に置き換えてください -->
+							<img class="js-fallback-image" src="images/work-03.jpg" alt="作品3のスクリーンショット"
+								data-placeholder-title="WORK 03 IMAGE"
+								data-placeholder-subtitle="images/work-03.jpg に画像を配置">
+							<span class="media-frame__index" aria-hidden="true">03</span>
+						</div>
 
 						<div class="work__content">
 							<p class="work__category">WEB APPLICATION</p>
-							<h3>作品タイトル 03</h3>
+							<h3>3Dカードゲーム</h3>
+							<p class="work__summary">
+								Webアプリケーションや開発支援ツールなどの概要を記載します。
+								利用者、主要機能、自分が担当した範囲を明確にすると制作規模が伝わります。
+							</p>
+
+							<dl class="work__meta">
+								<div>
+									<dt>制作期間</dt>
+									<dd>20XX年X月〜20XX年X月</dd>
+								</div>
+								<div>
+									<dt>制作人数</dt>
+									<dd>チームX名</dd>
+								</div>
+								<div>
+									<dt>担当</dt>
+									<dd>画面設計、フロントエンド実装</dd>
+								</div>
+								<div>
+									<dt>使用技術</dt>
+									<dd>React / JavaScript / CSS / GitHub</dd>
+								</div>
+							</dl>
+							<dl class="work__meta">
+								<div>
+									<dt>制作期間</dt>
+									<dd>20XX年X月〜20XX年X月</dd>
+								</div>
+								<div>
+									<dt>制作人数</dt>
+									<dd>チームX名</dd>
+								</div>
+								<div>
+									<dt>担当</dt>
+									<dd>画面設計、フロントエンド実装</dd>
+								</div>
+								<div>
+									<dt>使用技術</dt>
+									<dd>React / JavaScript / CSS / GitHub</dd>
+								</div>
+							</dl>
+
+							<div class="work__detail">
+								<h4>技術的な工夫・難しかった点</h4>
+								<p>
+									コンポーネント設計、レスポンシブ対応、データ保存、共同開発の進め方など、
+									実際に工夫した内容へ置き換えてください。
+								</p>
+							</div>
+							<div class="work__detail">
+								<h4>技術的な工夫・難しかった点</h4>
+								<p>
+									コンポーネント設計、レスポンシブ対応、データ保存、共同開発の進め方など、
+									実際に工夫した内容へ置き換えてください。
+								</p>
+							</div>
+
+							<ul class="tag-list" aria-label="使用技術">
+								<li>React</li>
+								<li>JavaScript</li>
+								<li>Responsive UI</li>
+							</ul>
+							<ul class="tag-list" aria-label="使用技術">
+								<li>React</li>
+								<li>JavaScript</li>
+								<li>Responsive UI</li>
+							</ul>
+
+							<div class="work__links">
+								<a href="#" aria-label="作品3のGitHubを開く">GitHub</a>
+								<a href="#" aria-label="作品3の詳細資料を開く">詳細資料</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- ==================== WORK 04：画像 ==================== -->
+					<article class="work reveal">
+						<div class="work__media media-frame">
+							<!-- ▼ images/work-03.jpg を作品画像に置き換えてください -->
+							<img class="js-fallback-image" src="images/work-04.jpg" alt="作品3のスクリーンショット"
+								data-placeholder-title="WORK 04 IMAGE"
+								data-placeholder-subtitle="images/work-04.jpg に画像を配置">
+							<span class="media-frame__index" aria-hidden="true">01</span>
+						</div>
+
+						<div class="work__content">
+							<p class="work__category">WEB APPLICATION</p>
+							<h3>作品タイトル 04</h3>
 							<p class="work__summary">
 								Webアプリケーションや開発支援ツールなどの概要を記載します。
 								利用者、主要機能、自分が担当した範囲を明確にすると制作規模が伝わります。
@@ -604,8 +1139,8 @@
 							</ul>
 
 							<div class="work__links">
-								<a href="#" aria-label="作品3のGitHubを開く">GitHub</a>
-								<a href="#" aria-label="作品3の詳細資料を開く">詳細資料</a>
+								<a href="#" aria-label="作品4のGitHubを開く">GitHub</a>
+								<a href="#" aria-label="作品4の詳細資料を開く">詳細資料</a>
 							</div>
 						</div>
 					</article>
@@ -625,15 +1160,35 @@
 						<h2>CONTACT</h2>
 					</div>
 				</header>
+		<!-- =========================================================
+			CONTACT
+		========================================================== -->
+		<section class="section section--contact" id="contact">
+			<div class="section__inner">
+				<header class="section-heading section-heading--dark reveal">
+					<p class="section-heading__number">04</p>
+					<div>
+						<p class="section-heading__label">GET IN TOUCH</p>
+						<h2>CONTACT</h2>
+					</div>
+				</header>
 
 				<div class="contact reveal">
 					<div>
-						<h3>ご覧いただき，ありがとうございます．</h3>
+						<h3>ご覧いただき，<br>ありがとうございます．</h3>
 						<p>
 							ご連絡はメールからお願いいたします．
 						</p>
 					</div>
 
+					<div class="contact__links">
+						<!-- ▼ メールアドレスを変更してください -->
+						<a class="contact-link" href="mailto:sk.zakku4@gmail.com">
+							<span class="contact-link__label">MAIL</span>
+							<!--<span>your-address@example.com</span> -->
+							<span>sk.zakku4@gmail.com</span>
+							<span class="contact-link__arrow" aria-hidden="true">↗</span>
+						</a>
 					<div class="contact__links">
 						<!-- ▼ メールアドレスを変更してください -->
 						<a class="contact-link" href="mailto:sk.zakku4@gmail.com">
@@ -655,11 +1210,28 @@
 			</div>
 		</section>
 	</main>
+						<!-- ▼ GitHub URLとユーザー名を変更してください -->
+						<a class="contact-link" href="https://github.com/KosukeShinki" target="_blank"
+							rel="noopener noreferrer">
+							<span class="contact-link__label">GITHUB</span>
+							<span>github.com/KosukeShinki</span>
+							<span class="contact-link__arrow" aria-hidden="true">↗</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<footer class="footer">
 		<a href="#top" class="footer__back-top">BACK TO TOP ↑</a>
 		<p>© <span id="current-year"></span> 新木 康介. All Rights Reserved.</p>
 	</footer>
+	<footer class="footer">
+		<a href="#top" class="footer__back-top">BACK TO TOP ↑</a>
+		<p>© <span id="current-year"></span> 新木 康介. All Rights Reserved.</p>
+	</footer>
 </body>
+
 
 </html>

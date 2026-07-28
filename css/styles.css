@@ -1008,7 +1008,7 @@ button {
 
 .contact {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(420px, 1.25fr);
+  grid-template-columns: minmax(0, 0.75fr) minmax(500px, 1fr);
   gap: clamp(50px, 9vw, 130px);
   align-items: start;
 }
