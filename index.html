@@ -717,29 +717,79 @@
 					<!-- ==================== WORK 04：画像 ==================== -->
 					<article class="work reveal">
 						<div class="work__media media-frame">
-							<!-- ▼ images/work-03.jpg を作品画像に置き換えてください -->
-							<img class="js-fallback-image" src="images/work-04.jpg" alt="作品3のスクリーンショット"
-								data-placeholder-title="WORK 04 IMAGE"
-								data-placeholder-subtitle="images/work-04.jpg に画像を配置">
-							<span class="media-frame__index" aria-hidden="true">01</span>
+							<div class="work__media media-frame js-video-frame">
+								<!--
+									▼ videos/work-02.mp4 を作品動画に置き換えてください。
+									動画を画像に変更する場合は、このvideo要素をWORK 01のimg要素と同じ形に置き換えます。
+								-->
+								<video controls muted playsinline preload="metadata" poster="images/ProjectManagement/ProjectManagement005.png"
+									aria-label="作品の紹介動画">
+									<source src="videos/ProjectManagement_002.mp4" type="video/mp4">
+									お使いのブラウザは動画再生に対応していません。
+								</video>
+								<div class="media-placeholder" aria-hidden="true">
+									<strong>WORK 01 VIDEO</strong>
+									<span>ゲーム作品の紹介動画</span>
+								</div>
+							</div>
+
+							<div class="work__media media-frame js-video-frame">
+								<!--
+									▼ videos/work-02.mp4 を作品動画に置き換えてください。
+									動画を画像に変更する場合は、このvideo要素をWORK 01のimg要素と同じ形に置き換えます。
+								-->
+								<video controls muted playsinline preload="metadata" poster="images/ProjectManagement/ProjectManagement001.png"
+									aria-label="作品の紹介動画">
+									<source src="videos/ProjectManagement_001.mp4" type="video/mp4">
+									お使いのブラウザは動画再生に対応していません。
+								</video>
+								<div class="media-placeholder" aria-hidden="true">
+									<strong>WORK 01 VIDEO</strong>
+									<span>ゲーム作品の紹介動画</span>
+								</div>
+							</div>
+
+							<div>
+								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
+								<img class="js-fallback-image" src="images/ProjectManagement/ProjectManagement001.png" alt="作品1のスクリーンショット"
+									data-placeholder-title="WORK 01-1 IMAGE"
+									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
+								<span class="media-frame__index" aria-hidden="true">01</span>
+							</div>
+
+							<div>
+								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
+								<img class="js-fallback-image" src="images/ProjectManagement/ProjectManagement004.png" alt="作品1のスクリーンショット"
+									data-placeholder-title="WORK 01-2 IMAGE"
+									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
+								<span class="media-frame__index" aria-hidden="true">02</span>
+							</div>
+
+							<div>
+								<!-- ▼ images/work-01.jpg を作品画像に置き換えてください -->
+								<img class="js-fallback-image" src="images/ProjectManagement/ProjectManagement003.png" alt="作品1のスクリーンショット"
+									data-placeholder-title="WORK 01-3 IMAGE"
+									data-placeholder-subtitle="images/work-01.jpg に画像を配置">
+								<span class="media-frame__index" aria-hidden="true">03</span>
+							</div>
 						</div>
 
 						<div class="work__content">
 							<p class="work__category">WEB APPLICATION</p>
-							<h3>作品タイトル 04</h3>
+							<h3>案件管理アプリ</h3>
 							<p class="work__summary">
-								Webアプリケーションや開発支援ツールなどの概要を記載します。
-								利用者、主要機能、自分が担当した範囲を明確にすると制作規模が伝わります。
+								バイト先の建築事務所で行う案件管理が複雑であったため，その事務所の社長から案件管理用のソフトウェアを開発できないか相談され制作したホワイトボードに付箋を貼るような形で案件共有が行えるデスクトップアプリケーションです．<br>
+								<font color="red">※実務上のデータはご覧いただけないため，疑似データに差し替えて紹介を行っております．</font>
 							</p>
 
 							<dl class="work__meta">
 								<div>
 									<dt>制作期間</dt>
-									<dd>20XX年X月〜20XX年X月</dd>
+									<dd>2024年9月〜2025年1月</dd>
 								</div>
 								<div>
 									<dt>制作人数</dt>
-									<dd>チームX名</dd>
+									<dd>個人 1人</dd>
 								</div>
 								<div>
 									<dt>担当</dt>
@@ -747,28 +797,51 @@
 								</div>
 								<div>
 									<dt>使用技術</dt>
-									<dd>React / JavaScript / CSS / GitHub</dd>
+									<dd> React / JavaScript / TypeScript / CSS / GitHub / Electron / Node.js </dd>
 								</div>
 							</dl>
 
 							<div class="work__detail">
+								<h4>作品説明</h4>
+								<p>
+									データベース上に登録された案件を自動で読みだして表示するデスクトップアプリケーションです．
+									読みだした案件は付箋のような形式で表示され，内部に案件の詳細や締め切りが記載されています．
+									また，任意の色，太さで線を描画できるため社員は共有したい情報を書き込めます．
+									一つ目の動画のように，案件の位置や大きさ，線の描画は事務所内のすべてのPCで共有されており，本アプリケーションを起動するだけで現在の案件の詳細や配置を確認，変更することができます．
+									こちらはUndo機能も搭載しているため間違えた場合にもすぐに修正が行えます．
+								</p>
+							</div>
+
+							<div class="work__detail">
 								<h4>技術的な工夫・難しかった点</h4>
 								<p>
-									コンポーネント設計、レスポンシブ対応、データ保存、共同開発の進め方など、
-									実際に工夫した内容へ置き換えてください。
+									このアプリケーションを作成する上で課題となった点は大きく3つあります．<br>
+									<br>
+									1つめは，ゲーム以外のデスクトップアプリケーションを作成することが初めてであったため，技術スタックの選定が難しかったことです．
+									Flutter，PyGUIを試した結果，親しみやすいUIで作成でき，かつ，一度設計したUI部品を使いまわせることが便利であったことからElectron+Reactを選びました．<br>
+									<br>
+									2つめは，事務所内でのデータの扱いが様々であったことです．
+									こちらの事務所では様々な取引先の会社がいらっしゃいますが，会社ごとにデータベースにある案件とExcel上にのみある案件が存在し，Excelも結合を行っている
+									表データであったため読み出し機能内のif分岐や会社の分別機能が複雑になり大変でした．こちらは密なコミュニケーションを社員や社長と行い，すべてのパターンを書き出すことで解決しました．<br>
+									<br>
+									3つめは，リアルタイムに案件や線の描画を共有するシステムの作成です．
+									こちらの共有を行える基盤のライブラリとして「y-js」を用いていますが，こちらは文字の共同編集機能時によく用いられる
+									ライブラリだったので案件の位置や線の描画データといった自作のデータを共有することが難しい点でした．
+									このシステムを作成するために共有用データを新たに定義し，共有用データから案件用データと線の描画の読み出しを行う機能を作成しました．<br>
+									<br>
+									
+
 								</p>
 							</div>
 
 							<ul class="tag-list" aria-label="使用技術">
 								<li>React</li>
 								<li>JavaScript</li>
-								<li>Responsive UI</li>
+								<li>TypeScript</li>
+								<li>CSS</li>
+								<li>Electron</li>
+								<li>Node.js</li>
 							</ul>
-
-							<div class="work__links">
-								<a href="#" aria-label="作品4のGitHubを開く">GitHub</a>
-								<a href="#" aria-label="作品4の詳細資料を開く">詳細資料</a>
-							</div>
 						</div>
 					</article>
 				</div>
